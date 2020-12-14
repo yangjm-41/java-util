@@ -145,5 +145,6 @@ public class CollectionDiffer<V> implements Differ<Collection<V>, CollectionDiff
         System.out.println("删除：" + diff.getRemoves());
         System.out.println("相同：" + diff.getEquals());
         System.out.println("修改：" + diff.getModifys());
+
     }
 }
