@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="01698360-a97b-4265-823f-ef2f4280afe6" name="默认的" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../apps/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apps\apache-maven-3.6.3\conf\settings-ali.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lT4rCRqSNirVLQRs17Eos0RYW6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/jm/langx/util" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jm.langx.util.collection.diff.builder" />
+      <recent name="com.jm.langx.util.collection.diff" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\trytry\langx-java\src\main\java\com\jm\langx\util" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CollectionDiffer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jm.langx.util.collection.diff.CollectionDiffer" />
+      <module name="langx-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jm.langx.util.collection.diff.builder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CollectionDiffer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01698360-a97b-4265-823f-ef2f4280afe6" name="默认的" comment="" />
+      <created>1607607945411</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607607945411</updated>
+      <workItem from="1607607946458" duration="8858000" />
+      <workItem from="1607617224555" duration="126000" />
+      <workItem from="1607617457303" duration="10000" />
+      <workItem from="1607651419160" duration="12525000" />
+      <workItem from="1607698948515" duration="5617000" />
+      <workItem from="1607865456909" duration="9692000" />
+      <workItem from="1607909727452" duration="5195000" />
+      <workItem from="1607948150635" duration="6397000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="523" y="0" key="#Auto_Import" timestamp="1607873536173">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="523" y="0" key="#Auto_Import/0.0.1536.824@0.0.1536.824" timestamp="1607873536173" />
+    <state x="395" y="90" key="#Inspections" timestamp="1607868323553">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="395" y="90" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1607868323553" />
+    <state x="485" y="241" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1607951424855">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="241" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1536.824@0.0.1536.824" timestamp="1607951424855" />
+    <state x="612" y="186" key="#com.intellij.ide.util.MemberChooser" timestamp="1607949125526">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="612" y="186" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607949125526" />
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607615329929" />
+    <state x="406" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607651504937">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="406" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1607651504937" />
+    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607953607690">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607953607690" />
+    <state x="524" y="114" key="#xdebugger.evaluate" timestamp="1607874917244">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="524" y="114" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1607874917244" />
+    <state width="434" height="466" key="DebuggerActiveHint" timestamp="1607671050265">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="434" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1607671050265" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607948316503">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607948316503" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1607953685754">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607953685754" />
+    <state width="1877" height="439" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1607953685754">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607953685754" />
+    <state width="1877" height="439" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1607953685754">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607953685754" />
+    <state width="1877" height="439" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1607953685754">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607953685754" />
+    <state width="1877" height="439" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1607875081935">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607875081935" />
+    <state width="1877" height="439" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
+    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1607875081935">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607875081935" />
+    <state width="1877" height="439" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
+    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1607875081934">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607875081934" />
+    <state width="1877" height="439" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
+    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1607875081935">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607875081935" />
+    <state width="1877" height="439" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
+    <state x="270" y="0" key="SettingsEditor" timestamp="1607952736636">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607952736636" />
+    <state x="370" y="202" width="994" height="642" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1607874652321">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="370" y="202" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1607874652321" />
+    <state x="463" y="255" width="994" height="642" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1607614374131" />
+    <state x="697" y="252" width="526" height="536" key="find.popup" timestamp="1607617300006">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="697" y="252" width="526" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607617300006" />
+    <state x="589" y="219" key="refactoring.ChangeSignatureDialog" timestamp="1607701604997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="589" y="219" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1607701604997" />
+    <state x="736" y="276" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607615046274" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607870909812">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607870909812" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jm/langx/util/collection/diff/CollDifferBuilder.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jm/langx/util/collection/diff/CollectionDiffer.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jm/langx/util/collection/diff/CollectionDiffer.java</url>
+          <line>76</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jm/langx/util/collection/diff/MapDiffer.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.UnsupportedOperationException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
