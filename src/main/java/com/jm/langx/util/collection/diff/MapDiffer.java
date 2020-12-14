@@ -61,7 +61,7 @@ public class MapDiffer<K,V> implements Differ<Map<K,V>, MapDiffResult<K, V>> {
         Map<K, V> adds = result.getAdds();
         keyDiff.getAdds().forEach(key -> adds.put(key, newValue.get(key)));
 
-        // 新增元素/修改元素归集
+        // 相同元素/修改元素归集
         Collection<K> equalsKey = keyDiff.getEquals();
         Map<K, V> modifys = result.getModifys();
         Map<K, V> equals = result.getEquals();
