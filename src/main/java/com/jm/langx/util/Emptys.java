@@ -28,6 +28,9 @@ public class Emptys {
         if(o instanceof Set){
             return ((Set)o).isEmpty();
         }
+        if(o instanceof String){
+            return ((String)o).isEmpty();
+        }
         return false;
     }
 
