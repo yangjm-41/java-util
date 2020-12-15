@@ -4,6 +4,7 @@ package com.jm.langx.util.tree;
 import com.jm.langx.util.Emptys;
 
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 /**
@@ -53,7 +54,7 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
             List<T> rootNodes = this.nodes;
             TreeNode pnode = null;
             boolean isChild = false;
-            pnode = rootNodes.stream().filter(rootNode -> rootNode.getId().equals(node.getPId())).findFirst().get();
+            pnode = rootNodes.stream().filter(rootNode -> rootNode.getId().equals(node.getPId())).findFirst().orElse(null);
             if (pnode != null) {
                 isChild = true;
                 pnode.setParent(true);
@@ -89,6 +90,20 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
     }
 
     @Override
+    public void forEach(Consumer<T> action) {
+        LinkedList<TreeNode> nodes = new LinkedList<>(this.nodes);
+        while (nodes.size() > 0){
+            TreeNode poll = nodes.poll();
+            action.accept((T) poll);
+            final Collection<TreeNode> childrens = poll.getChildrens();
+            if(Emptys.isNotEmpty(childrens)){
+                nodes.addAll(childrens);
+            }
+        }
+
+    }
+
+    @Override
     public void clear() {
         nodeMap.clear();
         nodes.clear();
@@ -96,12 +111,12 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
 
     public static void main(String[] args) {
 
-        TreeNode node2 = new TreeNode("2", "节点1", "1");
-        TreeNode node3 = new TreeNode("3", "节点2", "1");
-        TreeNode node4 = new TreeNode("4", "节点3", "2");
+        TreeNode node2 = new TreeNode("2", "节点2", "1");
+        TreeNode node3 = new TreeNode("3", "节点3", "1");
+        TreeNode node4 = new TreeNode("4", "节点4", "2");
         TreeNode node1 = new TreeNode("1", "根节点", null);
-        TreeNode node5 = new TreeNode("5", "节点4", "2");
-        TreeNode node6 = new TreeNode("6", "节点5", "3");
+        TreeNode node5 = new TreeNode("5", "节点5", "2");
+        TreeNode node6 = new TreeNode("6", "节点6", "3");
         TreeNode node7 = new TreeNode("7", "节点7", "3");
         TreeNode node8 = new TreeNode("8", "节点8", "6");
 
@@ -109,6 +124,6 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
 
         final List<TreeNode> treeNodes = Arrays.asList(node4, node9, node3, node1, node5, node6, node7, node8,node2);
         final CommonTree<TreeNode> commonTree = new CommonTree(treeNodes);
-        System.out.println(commonTree.getRootNodes().stream().map(TreeNode::getName).collect(Collectors.joining(",")));
+        commonTree.forEach(node -> System.out.println(node.getName()));
     }
 }
