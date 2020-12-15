@@ -44,28 +44,23 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
         node.setPId(pId);
 
         TreeNode parentNode = (TreeNode) this.nodeMap.get(pId);
+        // 父节点不为空时，将该节点添加到父节点中
         if (parentNode != null) {
             parentNode.setParent(true);
             parentNode.addChild(node);
         } else {
+            // 父节点为空时，遍历root节点,从root中找一遍
             List<T> rootNodes = this.nodes;
-
-
             TreeNode pnode = null;
             boolean isChild = false;
-            for (TreeNode rootNode : rootNodes) {
-                if (rootNode.getId().equals(node.getPId())) {
-                    pnode = rootNode;
-                    break;
-                }
-            }
+            pnode = rootNodes.stream().filter(rootNode -> rootNode.getId().equals(node.getPId())).findFirst().get();
             if (pnode != null) {
                 isChild = true;
                 pnode.setParent(true);
                 pnode.addChild(node);
             }
 
-
+            // 插入节点不是父节点，遍历rootNodes，如果存在root节点的pId和该插入节点的id相等，则删除这个父节点，并追加上该插入节点到rootNodes上
             boolean isParent = node.isParent();
             if (!isParent) {
                 Iterator<TreeNode> iter = (Iterator<TreeNode>) rootNodes.iterator();
@@ -79,6 +74,7 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
                 }
             }
 
+            // 如果在nodeMap和rootNodes中都找不到的话说明它是根节点了，加入根节点list
             if (!isChild) {
                 this.nodes.add(node);
             }
