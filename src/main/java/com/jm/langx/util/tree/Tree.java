@@ -42,6 +42,13 @@ public interface Tree<T extends TreeNode> {
     void forEach(Consumer<T> action);
 
     /**
+     * 删除节点
+     * @param node
+     * @return
+     */
+    boolean deleteNodeById(String nodeId);
+
+    /**
      * 清除树的所有节点
      */
     void clear();

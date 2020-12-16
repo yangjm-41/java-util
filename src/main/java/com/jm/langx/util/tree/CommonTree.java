@@ -104,6 +104,20 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
     }
 
     @Override
+    public boolean deleteNodeById(String nodeId) {
+        LinkedList<TreeNode> nodes = new LinkedList<>(Arrays.asList(this.nodeMap.remove(nodeId)));
+        while (nodes.size() > 0){
+            TreeNode poll = nodes.poll();
+            Collection<TreeNode> childrens = poll.getChildrens();
+            if(Emptys.isNotEmpty(childrens)){
+                nodes.addAll(childrens);
+                childrens.forEach(child -> this.nodeMap.remove(child.getId()));
+            }
+        }
+        return true;
+    }
+
+    @Override
     public void clear() {
         nodeMap.clear();
         nodes.clear();
