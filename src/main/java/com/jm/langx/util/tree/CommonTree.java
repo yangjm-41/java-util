@@ -2,6 +2,7 @@ package com.jm.langx.util.tree;
 
 
 import com.jm.langx.util.Emptys;
+import com.jm.langx.util.Objects;
 
 import java.util.*;
 import java.util.function.Consumer;
@@ -105,14 +106,22 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
 
     @Override
     public boolean deleteNodeById(String nodeId) {
-        LinkedList<TreeNode> nodes = new LinkedList<>(Arrays.asList(this.nodeMap.remove(nodeId)));
-        while (nodes.size() > 0){
-            TreeNode poll = nodes.poll();
-            Collection<TreeNode> childrens = poll.getChildrens();
+        LinkedList<TreeNode> childTree = new LinkedList<>(Arrays.asList(this.nodeMap.get(nodeId)));
+        while (childTree.size() > 0){
+            TreeNode poll = childTree.poll();
+            Collection<T> childrens = (Collection<T>) poll.getChildrens();
             if(Emptys.isNotEmpty(childrens)){
-                nodes.addAll(childrens);
+                childTree.addAll(childrens);
                 childrens.forEach(child -> this.nodeMap.remove(child.getId()));
+                childrens.clear();
             }
+
+            this.nodes.remove(poll);
+            final T pNode = this.nodeMap.get(poll.getPId());
+            if(Emptys.isNotEmpty(pNode) && Emptys.isNotEmpty(pNode)){
+                pNode.getChildrens().remove(poll);
+            }
+
         }
         return true;
     }
@@ -138,6 +147,7 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
 
         final List<TreeNode> treeNodes = Arrays.asList(node4, node9, node3, node1, node5, node6, node7, node8,node2);
         final CommonTree<TreeNode> commonTree = new CommonTree(treeNodes);
+        commonTree.deleteNodeById("3");
         commonTree.forEach(node -> System.out.println(node.getName()));
     }
 }
