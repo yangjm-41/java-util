@@ -3,6 +3,7 @@ package com.jm.langx.util.tree;
 
 import com.jm.langx.util.Emptys;
 import com.jm.langx.util.Objects;
+import com.jm.langx.util.tree.builder.TreeBuilder;
 
 import java.util.*;
 import java.util.function.Consumer;
@@ -13,13 +14,13 @@ import java.util.stream.Collectors;
  * @Create by yangjm
  * @CreateTime 2020/12/14 21:51
  */
-public class CommonTree<T extends TreeNode> implements Tree<T> {
+public class CommonTree<T extends BaseNode<T>> implements Tree<T> {
     private List<T> nodes = new ArrayList<>();
     private Map<String, T> nodeMap = new HashMap<>();
 
     public CommonTree(Collection<T> nodes) {
         if(Emptys.isNotEmpty(nodes)){
-            nodeMap.putAll(nodes.stream().collect(Collectors.toMap(TreeNode::getId,e -> e)));
+            nodeMap.putAll(nodes.stream().collect(Collectors.toMap(T::getId,e -> e)));
             nodes.forEach(this::addNode);
         }
     }
@@ -27,7 +28,7 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
     @Override
     public void addNodes(List<T> paramList) {
         if(Emptys.isNotEmpty(paramList)){
-            nodeMap.putAll(nodes.stream().collect(Collectors.toMap(TreeNode::getId,e -> e)));
+            nodeMap.putAll(nodes.stream().collect(Collectors.toMap(T::getId,e -> e)));
             nodes.forEach(this::addNode);
         }
     }
@@ -45,7 +46,7 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
         }
         node.setPId(pId);
 
-        TreeNode parentNode = (TreeNode) this.nodeMap.get(pId);
+        T parentNode = (T) this.nodeMap.get(pId);
         // 父节点不为空时，将该节点添加到父节点中
         if (parentNode != null) {
             parentNode.setParent(true);
@@ -53,7 +54,7 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
         } else {
             // 父节点为空时，遍历root节点,从root中找一遍
             List<T> rootNodes = this.nodes;
-            TreeNode pnode = null;
+            T pnode = null;
             boolean isChild = false;
             pnode = rootNodes.stream().filter(rootNode -> rootNode.getId().equals(node.getPId())).findFirst().orElse(null);
             if (pnode != null) {
@@ -65,9 +66,9 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
             // 插入节点不是父节点，遍历rootNodes，如果存在root节点的pId和该插入节点的id相等，则删除这个父节点，并追加上该插入节点到rootNodes上
             boolean isParent = node.isParent();
             if (!isParent) {
-                Iterator<TreeNode> iter = (Iterator<TreeNode>) rootNodes.iterator();
+                Iterator<T> iter = (Iterator<T>) rootNodes.iterator();
                 while (iter.hasNext()) {
-                    TreeNode rootNode = (TreeNode) iter.next();
+                    T rootNode = (T) iter.next();
                     if (node.getId().equals(rootNode.getPId())) {
                         node.setParent(true);
                         node.addChild(rootNode);
@@ -92,11 +93,11 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
 
     @Override
     public void forEach(Consumer<T> action) {
-        LinkedList<TreeNode> nodes = new LinkedList<>(this.nodes);
+        LinkedList<T> nodes = new LinkedList<>(this.nodes);
         while (nodes.size() > 0){
-            TreeNode poll = nodes.poll();
+            T poll = nodes.poll();
             action.accept((T) poll);
-            final Collection<TreeNode> childrens = poll.getChildrens();
+            final Collection<T> childrens = poll.getChildrens();
             if(Emptys.isNotEmpty(childrens)){
                 nodes.addAll(childrens);
             }
@@ -106,9 +107,9 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
 
     @Override
     public boolean deleteNodeById(String nodeId) {
-        LinkedList<TreeNode> childTree = new LinkedList<>(Arrays.asList(this.nodeMap.get(nodeId)));
+        LinkedList<T> childTree = new LinkedList<>(Arrays.asList(this.nodeMap.get(nodeId)));
         while (childTree.size() > 0){
-            TreeNode poll = childTree.poll();
+            T poll = childTree.poll();
             Collection<T> childrens = (Collection<T>) poll.getChildrens();
             if(Emptys.isNotEmpty(childrens)){
                 childTree.addAll(childrens);
@@ -146,8 +147,8 @@ public class CommonTree<T extends TreeNode> implements Tree<T> {
         TreeNode node9 = new TreeNode("9", "节点9", "ronaldo");
 
         final List<TreeNode> treeNodes = Arrays.asList(node4, node9, node3, node1, node5, node6, node7, node8,node2);
-        final CommonTree<TreeNode> commonTree = new CommonTree(treeNodes);
-        commonTree.deleteNodeById("3");
-        commonTree.forEach(node -> System.out.println(node.getName()));
+        CommonTree<TreeNode> tree = TreeBuilder.<TreeNode>createBuilder().addNodes(treeNodes).getTree();
+        tree.deleteNodeById("3");
+        tree.forEach(node -> System.out.println(node.getName()));
     }
 }

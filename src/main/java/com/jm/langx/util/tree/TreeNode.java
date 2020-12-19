@@ -11,7 +11,7 @@ import java.util.Objects;
  * @Create by yangjm
  * @CreateTime 2020/12/14 21:51
  */
-public class TreeNode {
+public class TreeNode implements BaseNode<TreeNode> {
     private String id;
     private String name;
     private String pId;
@@ -43,6 +43,7 @@ public class TreeNode {
         this.pId = pId;
     }
 
+    @Override
     public void addChild(TreeNode node){
         if(Emptys.isEmpty(childrens)){
             childrens = new ArrayList<>();
@@ -50,42 +51,52 @@ public class TreeNode {
         this.childrens.add(node);
     }
 
+    @Override
     public String getId() {
         return id;
     }
 
+    @Override
     public void setId(String id) {
         this.id = id;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
     }
 
+    @Override
     public String getPId() {
         return pId;
     }
 
+    @Override
     public void setPId(String pId) {
         this.pId = pId;
     }
 
+    @Override
     public boolean isParent() {
         return isParent;
     }
 
+    @Override
     public void setParent(boolean parent) {
         isParent = parent;
     }
 
+    @Override
     public Collection<TreeNode> getChildrens() {
         return childrens;
     }
 
+    @Override
     public void setChildrens(Collection<TreeNode> childrens) {
         this.childrens = childrens;
     }

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
  * @Create by yangjm
  * @CreateTime 2020/12/14 21:51
  */
-public interface Tree<T extends TreeNode> {
+public interface Tree<T extends BaseNode> {
 
     /**
      * 添加一批树节点
@@ -43,7 +43,7 @@ public interface Tree<T extends TreeNode> {
 
     /**
      * 删除节点
-     * @param node
+     * @param nodeId
      * @return
      */
     boolean deleteNodeById(String nodeId);
