@@ -33,10 +33,9 @@ public class CommonTree<T extends BaseNode<T>> implements Tree<T> {
     @Override
     public void addNodes(Collection<T> paramList) {
         if(Emptys.isNotEmpty(paramList)){
-            nodes.forEach(node -> {
-                nodeMap.put(node.getId(), node);
-                addNode(node);
-            });
+            // 这里必须要先把节点添加到map上，才能进行将节点挂在到树上。
+            nodeMap.putAll(paramList.stream().collect(Collectors.toMap(T::getId, node -> node)));
+            paramList.forEach(this::addNode);
         }
     }
 
@@ -160,7 +159,7 @@ public class CommonTree<T extends BaseNode<T>> implements Tree<T> {
 
         final List<TreeNode> treeNodes = Arrays.asList(node4, node9, node3, node1, node5, node6, node7, node8,node2);
         CommonTree<TreeNode> tree = CommonTree.getInstance(treeNodes);
-        tree.deleteNodeById("9");
+        //tree.deleteNodeById("9");
         tree.forEach(node -> System.out.println(node.getName()));
     }
 }
