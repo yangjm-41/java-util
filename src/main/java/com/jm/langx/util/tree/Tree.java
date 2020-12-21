@@ -49,6 +49,13 @@ public interface Tree<T extends BaseNode> {
     boolean deleteNodeById(String nodeId);
 
     /**
+     * 获取单个节点
+     * @param nodeId
+     * @return
+     */
+    public T getNode(String nodeId);
+
+    /**
      * 清除树的所有节点
      */
     void clear();

@@ -22,6 +22,13 @@ public class TreeBuilder<TREENODE extends BaseNode<TREENODE>> {
         return this;
     }
 
+    public CommonTree<TREENODE> getTree(List<TREENODE> nodes){
+        if(Emptys.isNotEmpty(nodes)){
+            this.nodes.addAll(nodes);
+        }
+        return new CommonTree<TREENODE>(this.nodes);
+    }
+
     public CommonTree<TREENODE> getTree(){
         return new CommonTree<TREENODE>(this.nodes);
     }

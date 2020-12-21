@@ -92,6 +92,11 @@ public class CommonTree<T extends BaseNode<T>> implements Tree<T> {
     }
 
     @Override
+    public T getNode(String id) {
+        return this.nodeMap.get(id);
+    }
+
+    @Override
     public void forEach(Consumer<T> action) {
         LinkedList<T> nodes = new LinkedList<>(this.nodes);
         while (nodes.size() > 0){
