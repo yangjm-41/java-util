@@ -1,5 +1,6 @@
 package com.jm.langx.util.tree;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -14,7 +15,7 @@ public interface Tree<T extends BaseNode> {
      * 添加一批树节点
      * @param nodes 添加的节点集合
      */
-    void addNodes(List<T> nodes);
+    void addNodes(Collection<T> nodes);
 
     /**
      * 添加单个树节点

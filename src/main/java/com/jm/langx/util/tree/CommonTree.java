@@ -2,8 +2,6 @@ package com.jm.langx.util.tree;
 
 
 import com.jm.langx.util.Emptys;
-import com.jm.langx.util.Objects;
-import com.jm.langx.util.tree.builder.TreeBuilder;
 
 import java.util.*;
 import java.util.function.Consumer;
@@ -18,18 +16,27 @@ public class CommonTree<T extends BaseNode<T>> implements Tree<T> {
     private List<T> nodes = new ArrayList<>();
     private Map<String, T> nodeMap = new HashMap<>();
 
+    public static final <T extends BaseNode<T>> CommonTree<T> getInstance(Collection<T> nodes) {
+        return new CommonTree<T>(nodes);
+    }
+
+    public static final <T extends BaseNode<T>> CommonTree<T> getInstance() {
+        return new CommonTree<T>(null);
+    }
+
     public CommonTree(Collection<T> nodes) {
         if(Emptys.isNotEmpty(nodes)){
-            nodeMap.putAll(nodes.stream().collect(Collectors.toMap(T::getId,e -> e)));
-            nodes.forEach(this::addNode);
+            addNodes(nodes);
         }
     }
 
     @Override
-    public void addNodes(List<T> paramList) {
+    public void addNodes(Collection<T> paramList) {
         if(Emptys.isNotEmpty(paramList)){
-            nodeMap.putAll(nodes.stream().collect(Collectors.toMap(T::getId,e -> e)));
-            nodes.forEach(this::addNode);
+            nodes.forEach(node -> {
+                nodeMap.put(node.getId(), node);
+                addNode(node);
+            });
         }
     }
 
@@ -152,8 +159,8 @@ public class CommonTree<T extends BaseNode<T>> implements Tree<T> {
         TreeNode node9 = new TreeNode("9", "节点9", "ronaldo");
 
         final List<TreeNode> treeNodes = Arrays.asList(node4, node9, node3, node1, node5, node6, node7, node8,node2);
-        CommonTree<TreeNode> tree = TreeBuilder.<TreeNode>createBuilder().addNodes(treeNodes).getTree();
-        tree.deleteNodeById("3");
+        CommonTree<TreeNode> tree = CommonTree.getInstance(treeNodes);
+        tree.deleteNodeById("9");
         tree.forEach(node -> System.out.println(node.getName()));
     }
 }
