@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01698360-a97b-4265-823f-ef2f4280afe6" name="默认的" comment="" />
+    <list default="true" id="01698360-a97b-4265-823f-ef2f4280afe6" name="默认的" comment="1.完善判空逻辑">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jm/langx/util/Nulls.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jm/langx/util/Numbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jm/langx/util/Emptys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jm/langx/util/Emptys.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,26 +20,35 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="main" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../apps/apache-maven-3.6.3" />
+        <option name="mavenHome" value="D:\apps\apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\apps\apache-maven-3.6.3\conf\settings-ali.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="1lT4rCRqSNirVLQRs17Eos0RYW6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/jm/langx/util" />
@@ -60,7 +75,7 @@
       <recent name="D:\work\trytry\langx-java\src\main\java\com\jm\langx\util" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Numbers">
     <configuration name="CollectionDiffer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jm.langx.util.collection.diff.CollectionDiffer" />
       <module name="langx-java" />
@@ -74,19 +89,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration name="CommonTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jm.langx.util.tree.CommonTree" />
+      <module name="langx-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jm.langx.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Emptys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jm.langx.util.Emptys" />
+      <module name="langx-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jm.langx.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Numbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jm.langx.util.Numbers" />
+      <module name="langx-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jm.langx.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Numbers" />
+        <item itemvalue="Application.Emptys" />
+        <item itemvalue="Application.CommonTree" />
         <item itemvalue="Application.CollectionDiffer" />
       </list>
     </recent_temporary>
@@ -107,112 +166,69 @@
       <workItem from="1607865456909" duration="9692000" />
       <workItem from="1607909727452" duration="5195000" />
       <workItem from="1607948150635" duration="6397000" />
+      <workItem from="1608514292783" duration="5319000" />
+      <workItem from="1608524787820" duration="1424000" />
+      <workItem from="1608603329710" duration="602000" />
+      <workItem from="1608645274767" duration="597000" />
+      <workItem from="1608687260730" duration="3729000" />
+      <workItem from="1608776516939" duration="592000" />
+      <workItem from="1608790981806" duration="607000" />
+      <workItem from="1608797941613" duration="1538000" />
+      <workItem from="1608799892444" duration="672000" />
+      <workItem from="1608800635370" duration="4663000" />
     </task>
+    <task id="LOCAL-00001" summary="提交数节点查询单个">
+      <created>1608518785961</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608518785961</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1.优化构造树的逻辑&#10;2.剔除构建CommonTree的鸡肋builder，改为以自身作为构造器。">
+      <created>1608524886311</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608524886311</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1.修复构造树，root节点list中存在非根节点的问题">
+      <created>1608525564639</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608525564639</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1.完善判空逻辑">
+      <created>1608803166988</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608803166988</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="523" y="0" key="#Auto_Import" timestamp="1607873536173">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="523" y="0" key="#Auto_Import/0.0.1536.824@0.0.1536.824" timestamp="1607873536173" />
-    <state x="395" y="90" key="#Inspections" timestamp="1607868323553">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="395" y="90" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1607868323553" />
-    <state x="485" y="241" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1607951424855">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="485" y="241" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1536.824@0.0.1536.824" timestamp="1607951424855" />
-    <state x="612" y="186" key="#com.intellij.ide.util.MemberChooser" timestamp="1607949125526">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="612" y="186" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607949125526" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607615329929" />
-    <state x="406" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607651504937">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="406" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1607651504937" />
-    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607953607690">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607953607690" />
-    <state x="524" y="114" key="#xdebugger.evaluate" timestamp="1607874917244">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="524" y="114" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1607874917244" />
-    <state width="434" height="466" key="DebuggerActiveHint" timestamp="1607671050265">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="434" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1607671050265" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607948316503">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607948316503" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1607953685754">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607953685754" />
-    <state width="1877" height="439" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1607953685754">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607953685754" />
-    <state width="1877" height="439" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1607953685754">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607953685754" />
-    <state width="1877" height="439" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1607953685754">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607953685754" />
-    <state width="1877" height="439" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1607875081935">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607875081935" />
-    <state width="1877" height="439" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
-    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1607875081935">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607875081935" />
-    <state width="1877" height="439" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
-    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1607875081934">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607875081934" />
-    <state width="1877" height="439" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
-    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1607875081935">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607875081935" />
-    <state width="1877" height="439" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607617209087" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1607952736636">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607952736636" />
-    <state x="370" y="202" width="994" height="642" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1607874652321">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="370" y="202" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1607874652321" />
-    <state x="463" y="255" width="994" height="642" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1607614374131" />
-    <state x="697" y="252" width="526" height="536" key="find.popup" timestamp="1607617300006">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="697" y="252" width="526" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607617300006" />
-    <state x="589" y="219" key="refactoring.ChangeSignatureDialog" timestamp="1607701604997">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="589" y="219" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1607701604997" />
-    <state x="736" y="276" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607615046274" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607870909812">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607870909812" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="提交数节点查询单个" />
+    <MESSAGE value="1.优化构造树的逻辑&#10;2.剔除构建CommonTree的鸡肋builder，改为以自身作为构造器。" />
+    <MESSAGE value="1.修复构造树，root节点list中存在非根节点的问题" />
+    <MESSAGE value="1.完善判空逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.完善判空逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -240,11 +256,34 @@
           <line>70</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jm/langx/util/tree/CommonTree.java</url>
+          <line>161</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jm/langx/util/tree/CommonTree.java</url>
+          <line>162</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jm/langx/util/Emptys.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="java.lang.UnsupportedOperationException" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/langx_java$Emptys.ic" NAME="Emptys Coverage Results" MODIFIED="1608799948439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.jm.langx.util.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -63,6 +63,9 @@ public class Emptys {
             CharSequence cs = (CharSequence) o;
             return cs.length() == 0;
         }
+        if (o instanceof Number) {
+            return Numbers.isZero(((Number)o));
+        }
 
         return false;
     }
