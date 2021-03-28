@@ -1,6 +1,5 @@
 package com.jm.langx.util.io;
 
-import com.sun.istack.internal.NotNull;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -15,7 +14,7 @@ public class InputStreams {
 
 
 
-    public static byte[] InputStream2ByteArray(@NotNull InputStream is) throws IOException {
+    public static byte[] InputStream2ByteArray( InputStream is) throws IOException {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         int len = 0;
         byte[] b = new byte[2048];
